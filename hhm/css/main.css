@@ -1,0 +1,32 @@
+.p-10p {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.cards .card-header {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.cards > :nth-child(odd)  .card-header {
+    background-color: #4b596c;
+}
+.cards > :nth-child(odd)  .card-body {
+    background-color: #e9eef3;
+}
+
+.cards > :nth-child(even)  .card-header {
+    background-color: #58ad52;
+}
+.cards > :nth-child(even)  .card-body {
+    background-color: #deebde;
+}
+
+.cards > :nth-child(even)  .card-body p:first-child {
+    color: #58ad52;
+}
+
+.contact__icon_size {
+    height: 200px;
+    width: 200px;
+}
