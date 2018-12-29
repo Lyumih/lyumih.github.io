@@ -1,0 +1,15 @@
+.form-control:focus {
+    border-color: #be393b;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(233, 6, 0, 0.6);
+}
+
+.header__logo_size {
+    height: 40px;
+    max-width: 100%;
+}
+
+.footer__icon {
+    background-color: #2f3338;
+}
