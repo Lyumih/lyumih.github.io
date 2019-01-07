@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Улучшение умений</title>
+</head>
+<body>
+<h1>Механика прокачки умений</h1>
+<h2><i>"Каждое применение умения увеличивает текущее мастерство владения им"</i></h2>
+<hr>
+<fieldset>
+    <legend><strong>Умения</strong></legend>
+    <div>
+        <h3>Ударить кулаком</h3>
+        <div id="level">Уровень: 1</div>
+        <div id="exp">Опыт: 0/5</div>
+        <br>
+        <div>Урон: 5 + (2 * уровень)</div>
+        <br>
+        <div id="description">Описание: вы наносите 7 урона ударом кулака</div>
+    </div>
+</fieldset>
+
+<h2>Тренировочный бой</h2>
+<div>
+    <div id="enemy_bar"><i>Ур.1 HP: 10 из 10</i></div>
+    <label>Тренировочный маникен</label>
+</div>
+<br>
+<button onClick="battle()">Ударить кулаком</button>
+<fieldset>
+    <legend>Описание боя</legend>
+    <ul>
+        <li id="battle_log">Бой с тренировочным маникеном начался!</li>
+    </ul>
+</fieldset>
+<!--<hr>-->
+<!--<h2>Калькулятор умений</h2>-->
+
+
+<script src="upgrade-skills.js"></script>
+</body>
+</html>
