@@ -4,6 +4,7 @@
 2. [Прототип админки для страницы Торгов по банкротству](https://lyumih.github.io/mortgaged-property/)
 
 
-# Необычные игровые механики (хобби)
+# Необычные механики (хобби)
 
-1. [Улучшение умений](https://lyumih.github.io/hobby/upgrade-skills/)
+1. [Система изучения английского языка через уровни](https://lyumih.github.io/city-level-eng/)
+2. [Улучшение умений](https://lyumih.github.io/hobby/upgrade-skills/)
