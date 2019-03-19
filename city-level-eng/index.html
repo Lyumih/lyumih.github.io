@@ -1,67 +1,137 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Система изучения английского языка через уровни</title>
-  </head>
-  <body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <div class="container">
-      <header class="row">
-        <h1 class="col text-center">Система изучения английского языка через уровни</h1>
-      </header>
+  <title>Система изучения английского языка через уровни</title>
+
+  <style>
+    .lvl2:hover~.lvl0 .lvl2-in {
+      color: blue;
+      background-color: aliceblue;
+      text-shadow: 1px 1px 2px aliceblue, 0 0 1em blue;
+    }
+
+    .lvl1:hover~.lvl0 .lvl1-in {
+      color: red;
+      background-color: aliceblue;
+      text-shadow: 1px 1px 2px aliceblue, 0 0 1em red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="row my-5">
+      <h1 class="col-12 text-center">Система изучения английского языка через уровни</h1>
+      <p class="my-2">О проектe:<a class="col-12" href="https://github.com/Lyumih/city-level-eng">https://github.com/Lyumih/city-level-eng</a>
+      </p>
+    </header>
 
 
-<main class="row">
+    <main class="row">
 
 
-  <table class="table col-12">
-    <thead class="thead-light">
-      <tr>
-        <th>Уровень</th>
-        <th>Правило</th>
-        <th>Содержание</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">2 - Сокращения</th>
-        <td>am/is/are</td>
-        <td>I'm = I am</td>
-      </tr>
-      <tr>
-        <th scope="row">1 - Времена</th>
-        <td>Present Simple: V/Vs</td>
-        <td>I + am</td>
-      </tr>
-      <tr>
-        <th scope="row">0 - Текст</th>
-        <td>I am Sasha</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-</main>
+      <table class="table table-hover col-12">
+        <thead class="thead-light">
+          <tr>
+            <th>Уровень</th>
+            <th>Правило</th>
+            <th>Содержание</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="lvl2">
+            <th>2 - Сокращения</th>
+            <td class="rule">am/is/are</td>
+            <td class="content">I'm = I am</td>
+          </tr>
+          <tr class="lvl1">
+            <th>1 - Времена</th>
+            <td class="rule">Present Simple: V/Vs</td>
+            <td class="content">I + am</td>
+          </tr>
+          <tr class="lvl0">
+            <th>0 - Текст</th>
+            <td class="content" colspan="2">
+              <span class="lvl1-in lvl2-in">I</span>
+              <span class="lvl1-in lvl2-in">am</span>
+              <span>Sasha</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
 
-      <div class="row">
-        <div class="col-6"><button class="btn btn-primary">Фильтры</button></div>
-        <div class="col-6"><button class="btn btn-primary">Следующий пример</button></div>
+    <div class="row my-2">
+      <div class="col-6 d-none">
+        <button class="btn btn-primary">Фильтры</button>
       </div>
-
-
-
+      <div class="col">
+        <button onclick="nextExample();" class="btn btn-primary btn-block">Следующий пример</button>
+      </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <script>
+    let example = 0
+    let MAX_EXAMPLE = 2
+
+    let lvl0Contents = [
+      '<span class="lvl1-in lvl2-in">I</span> <span class="lvl1-in lvl2-in">am Sasha.',
+      '<span class="lvl1-in lvl2-in">What\'s</span> your name?'
+    ]
+    let lvl1Contents = ["I + am", "What is"]
+    let lvl1Rules = ["+ Present Simple: V/Vs", "? Present Simple: V/Vs"]
+    let lvl2Contents = ["I'm = I am", "What's = What is"]
+    let lvl2Rules = ["am/is/are", "am/is/are"]
+
+
+    init()
+
+    function init() {
+      example = MAX_EXAMPLE
+      nextExample()
+    }
+
+    function nextExample() {
+      console.log('Получить следующий пример')
+      example++
+      if (example >= MAX_EXAMPLE) {
+        example = 0
+      }
+      console.log(example)
+      printExample(example)
+    }
+
+
+    function printExample(example) {
+      console.log('Показать пример', example)
+      $('.lvl0 > .content').html(lvl0Contents[example])
+      $('.lvl1 > .content').text(lvl1Contents[example])
+      $('.lvl2 > .content').text(lvl2Contents[example])
+
+
+      $('.lvl1 > .rule').text(lvl1Rules[example])
+      $('.lvl2 > .rule').text(lvl2Rules[example])
+    }
+  </script>
+</body>
+
 </html>
