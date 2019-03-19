@@ -60,10 +60,13 @@
           </tr>
           <tr class="lvl0">
             <th>0 - Текст</th>
-            <td class="content">
+            <td class="rule">
               <span class="lvl1-in lvl2-in">I</span>
               <span class="lvl1-in lvl2-in">am</span>
               <span>Sasha</span>
+            </td>
+            <td class="content">
+              <span class="lvl1-in lvl2-in">Я</span> Саша
             </td>
           </tr>
         </tbody>
@@ -93,12 +96,19 @@
     let example = 0
     let MAX_EXAMPLE = 2
 
-    let lvl0Contents = [
+
+    let lvl0Rules = [
       '<span class="lvl1-in lvl2-in">I am</span> Sasha.',
       '<span class="lvl1-in lvl2-in">What\'s</span> your name?'
     ]
-    let lvl1Contents = ["I + am", "What is"]
+    let lvl0Contents = [
+      '<span class="lvl1-in lvl2-in">Я</span> Саша.',
+      '<span class="lvl1-in lvl2-in">Как</span> тебя <span class="lvl1-in"> зовут?</span>'
+    ]
+
+    let lvl1Contents = ["I + am", "What + is + your name"]
     let lvl1Rules = ["+ Present Simple: V/Vs", "? Present Simple: V/Vs"]
+
     let lvl2Contents = ["I'm = I am", "What's = What is"]
     let lvl2Rules = ["am/is/are", "am/is/are"]
 
@@ -127,7 +137,7 @@
       $('.lvl1 > .content').text(lvl1Contents[example])
       $('.lvl2 > .content').text(lvl2Contents[example])
 
-
+      $('.lvl0 > .rule').html(lvl0Rules[example])
       $('.lvl1 > .rule').text(lvl1Rules[example])
       $('.lvl2 > .rule').text(lvl2Rules[example])
     }
