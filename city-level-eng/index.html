@@ -36,69 +36,100 @@
     </header>
 
 
-    <main class="row">
+    <main>
 
+      <!-- Строка с основной таблицей -->
+      <div class="row">
+        <!-- ОСНОВНАЯ ТАБЛИЦА С УРОВНЯМИ -->
+        <table class="table table-hover col-12">
+          <thead class="thead-light">
+            <tr>
+              <th>Уровень</th>
+              <th>Правило</th>
+              <th>Содержание</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="lvl2">
+              <th>2 - Сокращения</th>
+              <td class="rule">am/is/are</td>
+              <td class="content">I'm = I am</td>
+            </tr>
+            <tr class="lvl1">
+              <th>1 - Времена</th>
+              <td class="rule">+ Present Simple: V/Vs</td>
+              <td class="content">I + am</td>
+            </tr>
+            <tr class="lvl0">
+              <th>0 - Текст</th>
+              <td class="rule">
+                <span class="lvl1-in lvl2-in">I</span>
+                <span class="lvl1-in lvl2-in">am</span>
+                <span>Sasha</span>
+              </td>
+              <td class="content">
+                <span class="lvl1-in lvl2-in">Я</span> Саша
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <table class="table table-hover col-12">
-        <thead class="thead-light">
-          <tr>
-            <th>Уровень</th>
-            <th>Правило</th>
-            <th>Содержание</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="lvl2">
-            <th>2 - Сокращения</th>
-            <td class="rule">am/is/are</td>
-            <td class="content">I'm = I am</td>
-          </tr>
-          <tr class="lvl1">
-            <th>1 - Времена</th>
-            <td class="rule">+ Present Simple: V/Vs</td>
-            <td class="content">I + am</td>
-          </tr>
-          <tr class="lvl0">
-            <th>0 - Текст</th>
-            <td class="rule">
-              <span class="lvl1-in lvl2-in">I</span>
-              <span class="lvl1-in lvl2-in">am</span>
-              <span>Sasha</span>
-            </td>
-            <td class="content">
-              <span class="lvl1-in lvl2-in">Я</span> Саша
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
+      <!-- Строка с кнопками управления -->
+      <div class="row my-2">
+        <!-- ВЫПАДАЮЩИЙ СПИСОК С ФИЛЬТРОМ -->
+        <div class="col-6">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuComplexity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Сложность
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuComplexity">
+              <h6 class="dropdown-header">Уровень языка</h6>
+              <div class="dropdown-divider"></div>
 
-    <div class="row my-2">
-      <div class="col-6">
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuComplexity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Сложность
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuComplexity">
-            <h6 class="dropdown-header">Уровень языка</h6>
-            <div class="dropdown-divider"></div>
+              <a class="dropdown-item active" href="https://englex.ru/level-elementary/" target="_blank">A1 Elementary &#10003;</a>
+              <a class="dropdown-item disabled" href="#!">A2 Pre-Intermediate</a>
+              <a class="dropdown-item disabled" href="#!">B1 Intermediate</a>
+              <a class="dropdown-item disabled" href="#!">B2 Upper-Intermediate</a>
+              <a class="dropdown-item disabled" href="#!">C1 Advanced</a>
+              <a class="dropdown-item disabled" href="#!">C2 Proficiency</a>
+            </div>
+          </div>
+        </div>
 
-            <a class="dropdown-item active" href="https://englex.ru/level-elementary/" target="_blank">A1 Elementary &#10003;</a>
-            <a class="dropdown-item disabled" href="#!">A2 Pre-Intermediate</a>
-            <a class="dropdown-item disabled" href="#!">B1 Intermediate</a>
-            <a class="dropdown-item disabled" href="#!">B2 Upper-Intermediate</a>
-            <a class="dropdown-item disabled" href="#!">C1 Advanced</a>
-            <a class="dropdown-item disabled" href="#!">C2 Proficiency</a>
+        <!-- КНОПКА СЛЕДУЮЩИЙ ПРИМЕР -->
+        <div class="col mb-5">
+          <button onclick="nextExample();" class="btn btn-primary btn-block">Следующий пример</button>
+        </div>
+      </div>
+
+      <!-- Строка с прикрепленным материалом -->
+      <div class="row my-5">
+        <h2 class="col-12 text-center">Теоритеческий материал</h2>
+
+        <div class="lvll-theory my-3">
+          <div class="col-12 text-center">
+            <h3>Уровень 1. Времена глаголов</h3>
+            <p>To be</p>
+            <img class="img-thumbnail" src="http://englishtexts.ru/wp-content/VerbToBe.png" alt="Уровень 1. Времена глаголов">
+            <p>Остальные глаголы</p>
+            <img class="img-thumbnail" src="http://openlit.ru/elements/forum/glagol.jpg" alt="Уровень 1. Времена глаголов">
+            <p>Остальные глаголы</p>
+            <img class="img-thumbnail" src="https://vivaeurope.ru/wp-content/uploads/2017/04/Zalog-v-angliyskom-yazyke.jpg" alt="Уровень 1. Времена глаголов">
+          </div>
+        </div>
+
+        <div class="lvl2-theory my-3">
+          <div class="col-12 text-center">
+            <h3>Уровень 2. Сокращения</h3>
+            <img class="img-thumbnail" src="https://i.imgur.com/XxjbVuW.png" alt="Уровень 1. Времена глаголов">
           </div>
         </div>
 
       </div>
-      <div class="col">
-        <button onclick="nextExample();" class="btn btn-primary btn-block">Следующий пример</button>
-      </div>
-    </div>
 
 
+    </main>
 
   </div>
 
