@@ -12,6 +12,12 @@
   <title>Система изучения английского языка через слои правил</title>
 
   <style>
+    .sticky {
+      position: fixed;
+      top: 0;
+      z-index: 101;
+    }
+
     .lvl2:hover~.lvl0 .lvl2-in {
       color: blue;
       background-color: aliceblue;
@@ -23,6 +29,10 @@
       background-color: aliceblue;
       text-shadow: 1px 1px 2px aliceblue, 0 0 1em red;
     }
+
+    .bg-white {
+      background-color: white;
+    }
   </style>
 </head>
 
@@ -30,27 +40,55 @@
 
 
   <div class="container">
-    <header class="row my-5">
+    <header class="row my-4">
       <h1 class="col-12 text-center">Система изучения английского языка через слои правил</h1>
       <p class="my-2">О проектe:<a class="col-12" href="https://github.com/Lyumih/city-level-eng">https://github.com/Lyumih/city-level-eng</a>
+      </p>
+      <h3 class="col-12">Подсказки:</h3><br>
+      <p>
+        1. Нажатие на <i>заголовок</i> таблицы <b>свернёт</b> её. <br>
+        2. Нажатие на <i>уровень</i> покажет <b>теоретический материал</b>. <br>
+        3. Наведение на <i>строку</i> <b>подсветит</b> ключевые слова в предложении. <br>
       </p>
     </header>
 
 
     <main>
 
+      <!-- ВЫПАДАЮЩИЙ СПИСОК С ФИЛЬТРОМ -->
+      <div class="col-12 text-right">
+        <div class="dropdown ">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuComplexity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Сложность
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuComplexity">
+            <h6 class="dropdown-header">Уровень языка</h6>
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item active" href="https://englex.ru/level-elementary/" target="_blank">A1
+              Elementary &#10003;</a>
+            <a class="dropdown-item disabled" href="#!">A2 Pre-Intermediate</a>
+            <a class="dropdown-item disabled" href="#!">B1 Intermediate</a>
+            <a class="dropdown-item disabled" href="#!">B2 Upper-Intermediate</a>
+            <a class="dropdown-item disabled" href="#!">C1 Advanced</a>
+            <a class="dropdown-item disabled" href="#!">C2 Proficiency</a>
+          </div>
+        </div>
+      </div>
+
+
       <!-- Строка с основной таблицей -->
-      <div class="row">
+      <div class="row bg-white" id="aside1">
         <!-- ОСНОВНАЯ ТАБЛИЦА С УРОВНЯМИ -->
-        <table class="table table-hover col-12">
-          <thead class="thead-light">
+        <table class="col-12 table table-hover my-3">
+          <thead class="thead-light" data-toggle="collapse" href="#collapseExample">
             <tr>
               <th>Уровень</th>
               <th>Правило</th>
               <th>Содержание</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="" id="collapseExample" aria-expanded="true">
             <tr class="lvl2" href="#top">
               <th><a href="#lvl2-theory">2 - Сокращения</a></th>
               <td class="rule">am/is/are</td>
@@ -74,32 +112,11 @@
             </tr>
           </tbody>
         </table>
-      </div>
 
-      <!-- Строка с кнопками управления -->
-      <div class="row my-2">
-        <!-- ВЫПАДАЮЩИЙ СПИСОК С ФИЛЬТРОМ -->
-        <div class="col-6">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuComplexity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Сложность
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuComplexity">
-              <h6 class="dropdown-header">Уровень языка</h6>
-              <div class="dropdown-divider"></div>
-
-              <a class="dropdown-item active" href="https://englex.ru/level-elementary/" target="_blank">A1 Elementary &#10003;</a>
-              <a class="dropdown-item disabled" href="#!">A2 Pre-Intermediate</a>
-              <a class="dropdown-item disabled" href="#!">B1 Intermediate</a>
-              <a class="dropdown-item disabled" href="#!">B2 Upper-Intermediate</a>
-              <a class="dropdown-item disabled" href="#!">C1 Advanced</a>
-              <a class="dropdown-item disabled" href="#!">C2 Proficiency</a>
-            </div>
-          </div>
-        </div>
+        <!-- Строка с кнопками управления -->
 
         <!-- КНОПКА СЛЕДУЮЩИЙ ПРИМЕР -->
-        <div class="col mb-5">
+        <div class="col-6 my-3">
           <button onclick="nextExample();" class="btn btn-primary btn-block">Следующий пример</button>
         </div>
       </div>
@@ -191,6 +208,46 @@
       $('.lvl1 > .rule').text(lvl1Rules[example])
       $('.lvl2 > .rule').text(lvl2Rules[example])
     }
+  </script>
+
+
+  <script>
+    // Прилипающий стикер
+    (function() { // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
+      var a = document.querySelector('#aside1'),
+        b = null; // селектор блока, который нужно закрепить
+      window.addEventListener('scroll', Ascroll, false);
+      document.body.addEventListener('scroll', Ascroll, false); // если у html и body высота равна 100%
+      function Ascroll() {
+        if (b == null) { // добавить потомка-обёртку, чтобы убрать зависимость с соседями
+          var Sa = getComputedStyle(a, ''),
+            s = '';
+          for (var i = 0; i < Sa.length; i++) { // перечислить стили CSS, которые нужно скопировать с родителя
+            if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+              s += Sa[i] + ': ' + Sa.getPropertyValue(Sa[i]) + '; '
+            }
+          }
+          b = document.createElement('div'); // создать потомка
+          b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+          a.insertBefore(b, a.firstChild); // поместить потомка в цепляющийся блок первым
+          var l = a.childNodes.length;
+          for (var i = 1; i < l; i++) { // переместить во вновь созданного потомка всех остальных потомков (итого: создан потомок-обёртка, внутри которого по прежнему работают скрипты)
+            b.appendChild(a.childNodes[1]);
+          }
+          a.style.height = b.getBoundingClientRect().height + 'px'; // если под скользящим элементом есть другие блоки, можно своё значение
+          a.style.padding = '0';
+          a.style.border = '0'; // если элементу присвоен padding или border
+        }
+        if (a.getBoundingClientRect().top <= 0) { // elem.getBoundingClientRect() возвращает в px координаты элемента относительно верхнего левого угла области просмотра окна браузера
+          b.className = 'sticky';
+        } else {
+          b.className = '';
+        }
+        window.addEventListener('resize', function() {
+          a.children[0].style.width = getComputedStyle(a, '').width
+        }, false); // если изменить размер окна браузера, измениться ширина элемента
+      }
+    })()
   </script>
 </body>
 
