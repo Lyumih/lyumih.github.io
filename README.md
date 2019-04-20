@@ -4,8 +4,8 @@
 2. [Прототип админки для страницы Торгов по банкротству](https://lyumih.github.io/mortgaged-property/)
 
 # Хакатоны
-## 20:19
-### Апрель 
+## 2019 Апрель 
+
 1. МАИ "Авиахакатон": [DRON: Доставь посылку! ](https://lyumih.github.io/dron-hack/dron-drop-box)
 2. МАИ "Авиахакатон": [DRON: Найди меня! ](https://lyumih.github.io/dron-hack/dron-find-me)
 
