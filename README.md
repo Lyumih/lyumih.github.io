@@ -2,7 +2,7 @@
 
 1. [Верстка сайта Honey Hunters Management](https://lyumih.github.io/hhm/)
 2. [Прототип админки для страницы Торгов по банкротству](https://lyumih.github.io/mortgaged-property/)
-3. [Галлерея и работа с Instagram](https://lyumih.github.io/gallery-instagram/)
+3. [Галерея и работа с Instagram](https://lyumih.github.io/gallery-instagram/)
 
 # Хакатоны 2019
 
