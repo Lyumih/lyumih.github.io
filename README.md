@@ -14,5 +14,8 @@
  
 1. [Система изучения английского языка через уровни](https://lyumih.github.io/city-level-eng/)
 2. [Улучшение умений](https://lyumih.github.io/hobby/upgrade-skills/)
+
+# Проекты на всю жизнь
  
-  ...
+1. [Поиск решения максимального кодирования без потерь](https://lyumih.github.io/ultimate_coder/)
+2. [Создание максимально расширяющегося пользователем игрового движка](https://lyumih.github.io/hobby/ultimate_card_game/)
