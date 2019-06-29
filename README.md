@@ -12,7 +12,7 @@
 
 # Необычные макеты, механики (хобби)
  
-1. [Макеты образовательной платформы для работников IT](https://lyumih.github.io/it-skills/)
+1. [Макет образовательной платформы для работников IT](https://lyumih.github.io/it-skills/)
 1. [Макет системы изучения английского языка через слои](https://lyumih.github.io/city-level-eng/)
 2. [Улучшение умений](https://lyumih.github.io/hobby/upgrade-skills/)
 
