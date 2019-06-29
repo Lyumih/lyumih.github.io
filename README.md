@@ -10,9 +10,10 @@
 1. МАИ "Авиахакатон": [DRON: Доставь посылку! ](https://lyumih.github.io/dron-hack/dron-drop-box)
 2. МАИ "Авиахакатон": [DRON: Найди меня! ](https://lyumih.github.io/dron-hack/dron-find-me)
 
-# Необычные механики (хобби)
+# Необычные макеты, механики (хобби)
  
-1. [Система изучения английского языка через уровни](https://lyumih.github.io/city-level-eng/)
+1. [Макеты образовательной платформы для работников IT](https://lyumih.github.io/it-skills/)
+1. [Макет системы изучения английского языка через слои](https://lyumih.github.io/city-level-eng/)
 2. [Улучшение умений](https://lyumih.github.io/hobby/upgrade-skills/)
 
 # Проекты на всю жизнь
