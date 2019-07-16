@@ -18,7 +18,7 @@
 
 # Мои ЭССЕ и Размышления
 
-1. [Подход к жизни "Модификация". Must Have, когда нужно сделать важную работу](https://lyumih.github.io/it-skills/)
+1. [Подход к жизни "Модификация". Must Have, когда нужно сделать важную работу](https://github.com/Lyumih/lifestyle-modification)
 
 # Проекты на всю жизнь
 
