@@ -7,6 +7,7 @@
 
 # Хакатоны 2019
 
+1. МойОфис "Сравнение Документов": [МойОфис: Сравнение документов ](https://lyumih.github.io/my-office)
 1. МАИ "Авиахакатон": [DRON: Доставь посылку! ](https://lyumih.github.io/dron-hack/dron-drop-box)
 2. МАИ "Авиахакатон": [DRON: Найди меня! ](https://lyumih.github.io/dron-hack/dron-find-me)
 
